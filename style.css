@@ -239,3 +239,38 @@ body {
     transform: rotate(360deg);
   }
 }
+
+/* ISSUES GRID */
+
+.issues-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+/* ISSUE CARD */
+
+.issue-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.issue-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.issue-desc {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 14px;
+}
+
+.issue-meta {
+  font-size: 12px;
+  color: #374151;
+  line-height: 1.7;
+}
