@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +9,6 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <!-- Login Page -->
   <section id="loginPage" class="login-page">
     <div class="login-card">
@@ -72,13 +73,18 @@
 
       <div class="issues-summary">
         <div class="left-summary">
-          <h3 id="issueCount">0 Issues</h3>
-          <p>Track and manage your project issues</p>
+          <div class="summary-top">
+            <span class="summary-icon">✺</span>
+            <div>
+              <h3 id="issueCount">0 Issues</h3>
+              <p>Track and manage your project issues</p>
+            </div>
+          </div>
         </div>
 
         <div class="right-summary">
-          <span>Open</span>
-          <span>Closed</span>
+          <span><span class="dot open-dot"></span> Open</span>
+          <span><span class="dot closed-dot"></span> Closed</span>
         </div>
       </div>
 
