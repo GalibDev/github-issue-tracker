@@ -24,3 +24,40 @@ loginForm.addEventListener("submit", function (e) {
   }
 
 });
+
+const issuesContainer = document.getElementById("issuesContainer");
+const loader = document.getElementById("loader");
+
+let allIssues = [];
+
+async function loadIssues() {
+
+  try {
+
+    loader.classList.remove("hidden");
+
+    const response = await fetch(
+      "https://phi-lab-server.vercel.app/api/v1/lab/issues"
+    );
+
+    const data = await response.json();
+
+    if (Array.isArray(data)) {
+      allIssues = data;
+    } else if (Array.isArray(data.data)) {
+      allIssues = data.data;
+    }
+
+    console.log("All Issues:", allIssues);
+
+  } catch (error) {
+
+    console.error("Error loading issues", error);
+
+  } finally {
+
+    loader.classList.add("hidden");
+
+  }
+
+}
