@@ -274,3 +274,61 @@ body {
   color: #374151;
   line-height: 1.7;
 }
+
+/* CARD TOP */
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+/* OPEN CLOSED BORDER */
+
+.issue-card.open {
+  border-top: 3px solid #22c55e;
+}
+
+.issue-card.closed {
+  border-top: 3px solid #a855f7;
+}
+
+/* STATUS ICON */
+
+.status-icon {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.status-open {
+  color: #22c55e;
+}
+
+.status-closed {
+  color: #a855f7;
+}
+
+/* PRIORITY BADGE */
+
+.priority-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.priority-badge.high {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+.priority-badge.medium {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.priority-badge.low {
+  background: #f3f4f6;
+  color: #6b7280;
+}
