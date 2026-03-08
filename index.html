@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub Issues Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Login Page -->
+  <section id="loginPage" class="login-page">
+    <div class="login-card">
+      <div class="logo-wrap">
+        <img
+          src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+          alt="GitHub Logo"
+          class="logo"
+        />
+      </div>
+
+      <h1 class="title">GitHub Issues Tracker</h1>
+      <p class="subtitle">Sign in to manage your issues</p>
+
+      <form id="loginForm" class="login-form">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter Username" />
+        <small class="hint">Default: admin</small>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter Password" />
+        <small class="hint">Default: admin123</small>
+
+        <button type="submit" class="signin-btn">Sign In</button>
+        <p id="errorMsg" class="error-msg"></p>
+      </form>
+
+      <p class="or-text">OR</p>
+
+      <div class="demo-box">
+        <p class="demo-title">Demo Credentials:</p>
+        <p><strong>Username:</strong> admin</p>
+        <p><strong>Password:</strong> admin123</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Page -->
+  <section id="mainPage" class="main-page hidden">
+    <nav class="navbar">
+      <div class="nav-left">
+        <img
+          src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+          alt="GitHub Logo"
+          class="nav-logo"
+        />
+        <h2>GitHub Issues Tracker</h2>
+      </div>
+
+      <div class="nav-right">
+        <input type="text" id="searchInput" placeholder="Search issues..." />
+        <button id="searchBtn" class="search-btn">Search</button>
+      </div>
+    </nav>
+
+    <div class="content-wrapper">
+      <div class="tabs">
+        <button class="tab active" data-tab="all">All</button>
+        <button class="tab" data-tab="open">Open</button>
+        <button class="tab" data-tab="closed">Closed</button>
+      </div>
+
+      <div class="issues-summary">
+        <div class="left-summary">
+          <h3 id="issueCount">0 Issues</h3>
+          <p>Track and manage your project issues</p>
+        </div>
+
+        <div class="right-summary">
+          <span>Open</span>
+          <span>Closed</span>
+        </div>
+      </div>
+
+      <div id="loader" class="loader hidden"></div>
+      <div id="issuesContainer" class="issues-container"></div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="issueModal" class="modal hidden">
+    <div class="modal-box">
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
